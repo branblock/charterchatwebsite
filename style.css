@@ -1,4 +1,6 @@
-/*General*/
+/*
+General
+*/
 
 a {
   color: #fff !important;
@@ -6,62 +8,76 @@ a {
 }
 
 body {
-  background: url("chalkboard.jpg");
+  background: #2c3e50;
   color: #fff;
-  font-family: 'Schoolbell', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .btn {
-  font-size: 28px;
-  font-weight: 700;
-  margin-top: 15px;
+  margin-top: 5px;
+  text-transform: uppercase;;
+}
+
+#form-input {
+  left: 0;
+  margin: 20px auto 0;
+  right: 0;
+  text-align: center;
+  width: 320px;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
   margin-bottom: 0;
-  padding: 40px 0 0;
+  padding: 60px 0 0;
 }
 
 h2 {
-  color: #c6c6c6;
-  font-size: 20px;
-  margin-bottom: 15px;
-  margin-top: 0;
+  color: #bdc3c7;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0 0 5px;
 }
 
-/* Footer */
+/*
+Footer
+*/
 
 .footer {
-  font-size: 14px;
+  font-size: 13px;
   margin: 40px 0 20px;
   text-align: center;
 }
 
-/* Media Queries */
+/*
+Media Queries
+*/
 
 @media screen and (max-width: 992px) {
   body {
-    font-size: 18px;
+    font-size: 14px;
   }
   h1 {
-    font-size: 44px;
+    font-size: 36px;
+    padding-top: 40px;
   }
   h2 {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
 @media screen and (max-width: 768px) {
   body {
-    font-size: 15px;
+    font-size: 14px;
   }
   h1 {
-    font-size: 36px;
+    font-size: 32px;
+    padding-top: 40px;
   }
   h2 {
-    font-size: 15px;
+    font-size: 18px;
   }
 }

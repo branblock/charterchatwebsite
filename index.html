@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="charterChat">
 <head lang="en">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CharterChat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+  <script src="app.js"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300, 400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-
+<body ng-controller="MainCtrl">
 <div class="container">
   <div class="row">
     <div class="col-md-6 text-center">
-      <h1>CHARTER<i class="fa fa-comments" aria-hidden="true" style="padding: 0 3px"></i>CHAT</h1>
-      <h2>A REAL-TIME CHAT & SCHEDULING APP</h2>
-      <p style="text-align: left">If you are a Larchmont Charter School parent, click the button below to email Brandon Block. He's the LCS parent who created this app. (Please, do not tell him it stinks.)</p>
-      <p style="text-align: left">Pay attention, you will be tested on this... In the email, state (1) your full name, and (2) whether you have an iPhone or Android phone. Once it's confirmed that you are a parent of an existing LCS student, you will be emailed a link and instructions for downloading the app to your phone.*</p>
-      <button type="button" class="btn btn-success">I want the app!</button>
+      <h1>CHARTER<i class="fa fa-comments" aria-hidden="true" style="color: #bdc3c7; padding: 0 3px"></i>CHAT</h1>
+      <h2>Chat & Schedule in Real-time.<br/>For Parents of LCS Students.</h2>
+      <p>If you are a parent of an existing LCS student and you want to try CharterChat, submit your name and email address below. Once verified, you'll receive an email with a link and instructions for getting started.</p>
+      <form name="signupForm" ng-hide="signupForm.$submitted">
+        <div class="form-group">
+          <input type="name" class="form-control" id="form-input" placeholder="Your full name" ng-model="newName" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="form-input" placeholder="Your email address" ng-model="newEmail" required>
+        </div>
+        <button class="btn btn-success" type="submit" ng-click="addUser()">Submit</button>
+      </form>
+      <div ng-show="submissionSuccess" style="font-weight: 700; text-transform: uppercase"><p>It worked, and thank you. Stay tuned...</p></div>
     </div>
     <div class="col-md-6">
       <img src="IMG_0532_iphone6_silver_portrait.png" style="width: 100%">
@@ -30,10 +41,9 @@
 
   <div class="footer">
     <p>
-      *CharterChat is not affiliated with Larchmont Charter School.<br />
-      <a href="#" target="_blank">Tutorials</a> | <a href="#" target="_blank">Terms of Use</a> | © 2016 Brandon A. Block
+      <em>CharterChat is purely parent-run. It is not affiliated with or supported by the administration of Larchmont Charter School.</em><br />
+      © 2016 Brandon A. Block
     </p>
   </div>
-
   </body>
 </html>
