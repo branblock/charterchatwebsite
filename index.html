@@ -11,33 +11,37 @@
   <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
   <script src="app.js"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300, 400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-controller="MainCtrl">
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 text-center">
-      <h1>CHARTER<i class="fa fa-comments" aria-hidden="true" style="color: #bdc3c7; padding: 0 3px"></i>CHAT</h1>
-      <h2>Chat & Schedule in Real-time.<br/>For Parents of LCS Students.</h2>
-      <p>If you are a parent of an existing LCS student and you want to try CharterChat, submit your name and email address below. Once verified, you'll receive an email with a link and instructions for getting started.</p>
-      <form name="signupForm" ng-hide="signupForm.$submitted">
-        <div class="form-group">
-          <input type="name" class="form-control" id="form-input" placeholder="Your full name" ng-model="newName" required>
-        </div>
-        <div class="form-group">
-          <input type="email" class="form-control" id="form-input" placeholder="Your email address" ng-model="newEmail" required>
-        </div>
-        <button class="btn btn-success" type="submit" ng-click="addUser()">Submit</button>
-      </form>
-      <div ng-show="submissionSuccess" style="font-weight: 700; text-transform: uppercase"><p>It worked, and thank you. Stay tuned...</p></div>
-    </div>
-    <div class="col-md-6">
-      <img src="IMG_0532_iphone6_silver_portrait.png" style="width: 100%">
+
+  <div class="container">
+    <div class="row">
+      <h1>Charter<i class="ion-chatboxes" aria-hidden="true" style="color: #387ef5; padding: 0 3px"></i>Chat</h1>
     </div>
   </div>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p id="main-content">CharterChat allows LCS parents to securely communicate, and schedule carpools and events, all in real-time. You must be a parent of an existing LCS student to join. If you are, and you want to try the app, submit your name and email address below. Once verified, you'll receive an email with a link and instructions for getting started.</p>
+        <form name="signupForm" ng-hide="signupForm.$submitted" id="signup-form">
+          <p style="font-weight: 700;">Try CharterChat</p>
+          <div class="form-group">
+            <input type="name" class="form-control" id="form-input" placeholder="Your full name" ng-model="newName" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="form-input" placeholder="Your email address" ng-model="newEmail" required>
+          </div>
+          <button class="btn btn-success" type="submit" ng-click="addUser()">Submit</button>
+        </form>
+        <div ng-show="submissionSuccess" style="font-weight: 700; text-transform: uppercase"><p>It worked! Stay tuned...</p></div>
+      </div>
+      <div class="col-md-6">
+        <img src="IMG_0532_iphone6_silver_side1.png" style="width: 100%">
+      </div>
+    </div>
+  </div>
 
   <div class="footer">
     <p>
