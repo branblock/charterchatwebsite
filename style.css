@@ -1,16 +1,7 @@
-/*
-General
-*/
-
-a {
-  color: #fff !important;
-  text-decoration: underline;
-}
-
 body {
   background: #fff;
   color: #000;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -26,7 +17,7 @@ h1 {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 0;
-  padding: 20px 0 0 15px;
+  padding: 30px 0 0;
 }
 
 h2 {
@@ -37,7 +28,7 @@ h2 {
 }
 
 #main-content {
-  padding-top: 60px;
+  padding-top: 10px;
 }
 
 #signup-form {
@@ -49,20 +40,14 @@ h2 {
   text-align: center;
 }
 
-/*
-Footer
-*/
-
-.footer {
+.container-fluid {
   font-size: 13px;
   margin: 40px 0 20px;
   padding: 0 15px;
   text-align: center;
 }
 
-/*
-Media Queries
-*/
+/*Media Queries*/
 
 @media screen and (max-width: 992px) {
   body {
@@ -79,9 +64,6 @@ Media Queries
   h2 {
     font-size: 22px;
   }
-  #main-content {
-    padding-top: 10px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -96,9 +78,6 @@ Media Queries
   h2 {
     font-size: 14px;
     padding-bottom: 10px;
-    padding-top: 10px;
-  }
-  #main-content {
     padding-top: 10px;
   }
 }

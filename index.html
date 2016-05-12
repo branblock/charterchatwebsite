@@ -15,15 +15,11 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-controller="MainCtrl">
-
-  <div class="container">
-    <div class="row">
-      <h1>Charter<i class="ion-chatboxes" aria-hidden="true" style="color: #387ef5; padding: 0 3px"></i>Chat</h1>
-    </div>
-  </div>
+  <!-- Main container -->
   <div class="container">
     <div class="row">
       <div class="col-md-6">
+        <h1>Charter<i class="ion-chatboxes" aria-hidden="true" style="color: #387ef5; padding: 0 3px"></i>Chat</h1>
         <p id="main-content">CharterChat allows LCS parents to securely communicate, and schedule carpools and events, all in real-time. You must be a parent of an existing LCS student to join. If you are, and you want to try the app, submit your name and email address below. Once verified, you'll receive an email with a link and instructions for getting started.</p>
         <form name="signupForm" ng-hide="signupForm.$submitted" id="signup-form">
           <p style="font-weight: 700;">Try CharterChat</p>
@@ -42,12 +38,13 @@
       </div>
     </div>
   </div>
-
-  <div class="footer">
+  <!-- Footer -->
+  <div class="container-fluid text-center">
     <p>
       <em>CharterChat is purely parent-run. It is not affiliated with or supported by the administration of Larchmont Charter School.</em><br />
       © 2016 Brandon A. Block
     </p>
   </div>
+
   </body>
 </html>
